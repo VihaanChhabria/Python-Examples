@@ -1,4 +1,5 @@
 #Finished on 7/7/2021
+#Replaces letters in a password to stronger charactors
 def listToString(s):
     str1 = ""
     for ele in s: 
