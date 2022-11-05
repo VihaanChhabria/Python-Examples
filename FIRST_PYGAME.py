@@ -37,7 +37,7 @@ while run:
     
     win.fill((0,0,0))  # Fills the screen with black
     pygame.draw.rect(win, (255,0,0), (x, y, width, height))  
-    pygame. draw. circle(win, (0,0,255), (150, 50), 50)
+    pygame. draw. circle(win, (0,0,255), (150, 50), 500)
     pygame.display.update() 
     
 pygame.quit()

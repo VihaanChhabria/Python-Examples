@@ -3,11 +3,10 @@ import random
 
 Human = 0
 Computer = 0
-hi = True
 a = ["rock", "paper", "scissors"]
 b = (random.choice(a))
 
-while hi == True:
+while True:
     c = input("Rock, Paper, Scissors! ")
     print(b)
 

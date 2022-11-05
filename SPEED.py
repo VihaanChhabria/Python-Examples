@@ -1,27 +1,30 @@
-#Finds speed
-while True :
+while True:
+    distance = 0
+    time = 0
+    speed = 0
+    
     print("d To Find Distance")
     print("t To Find Time")
     print("s To Find Speed")
-    Hi = input("")
+    choice = input("")
 
-    if Hi == "s":
-        Distance = input("Distance is ")
-        Time = input("Time is ")
+    if choice == "s":
+        distance = input("Distance is ")
+        time = input("Time is ")
 
-        Speed = int(Distance) / int(Time)
-        print(Speed)
+        speed = int(distance) / int(time)
+        print(speed)
 
-    if Hi == "t":
-        Distance = input("Distance is ")
-        Speed = input("Speed is ")
+    if choice == "t":
+        distance = input("Distance is ")
+        time = input("Speed is ")
 
-        Time = int(Distance) / int(Speed)
-        print(Time)
+        time = int(distance) / int(speed)
+        print(time)
 
-    if Hi == "d":
-        Time = input("Time is ")
-        Speed = input("Speed is ")
+    if choice == "s":
+        distance = input("Time is ")
+        time = input("Speed is ")
 
-        Distance = int(Time) * int(Speed)
-        print(Distance)
+        distance = int(time) * int(speed)
+        print(speed)

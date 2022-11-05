@@ -1,8 +1,12 @@
-#Calcutater
+#Calculator
 Choice=0
 Calc=0
-Choice=input("Enter 1 for add, 2 for subtract 3 for Multiply and 4 for Divide and 5 to Exit ")
 while int(Choice) != 5:
+    Choice=input("Enter 1 for add, 2 for subtract 3 for Multiply and 4 for Divide and 5 to Exit ")
+
+    if int(Choice) == 5:
+        exit()
+
     Num1=input("Enter First Number ")
     Num2=input("Enter Second Number ")
 
@@ -29,9 +33,8 @@ while int(Choice) != 5:
         #divide 2 numbers
         Calc=float(Num1)/float(Num2)
 
-
     else:
         print("INVALID CHOICE")
 
-    print(float(Calc))
-    Choice=input("Enter 1 for add, 2 for subtract 3 for Multiply and 4 for Divide and 5 to Exit")
+    print("Your Number is", Calc)
+    
