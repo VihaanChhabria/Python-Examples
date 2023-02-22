@@ -1,9 +1,9 @@
 import numpy as np
 import cv2
 
-img = cv2.imread('C:\Vihaan\Python Examples\OpenCV Tutorial\Assets\Room.jpg', 0) #Loads in main picture in gray scale
-spider = cv2.imread('C:\Vihaan\Python Examples\OpenCV Tutorial\Assets\spider.jpg', 0) #Loads picture of a spider in main picture in gray scale
-head = cv2.imread('C:\Vihaan\Python Examples\OpenCV Tutorial\Assets\head.jpg', 0) #Loads picture of a head in main picture in gray scale
+img = cv2.imread(r'C:\Users\vihaa\Python-Examples\OpenCV Tutorial\Assets\Room.jpg', 0) #Loads in main picture in gray scale
+spider = cv2.imread(r'C:\Users\vihaa\Python-Examples\OpenCV Tutorial\Assets\spider.jpg', 0) #Loads picture of a spider in main picture in gray scale
+head = cv2.imread(r'C:\Users\vihaa\Python-Examples\OpenCV Tutorial\Assets\head.jpg', 0) #Loads picture of a head in main picture in gray scale
 hs, ws = spider.shape #Finds the width and height of the spider
 hh, wh = head.shape #Finds the width and height of the head
 
