@@ -1,9 +1,33 @@
-import cv2
-import numpy as np
-height=512
-width=512
-blank_image = np.zeros((height,width,3), np.uint8)
-blank_image[:]=(0,124,255)
-cv2.imshow('3 Channel Window', blank_image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+from array import array
+import socket
+import time
+import sys
+
+import tk
+import tkinter.simpledialog
+root = tk()
+root.withdraw()
+
+PORT = 42001
+HOST = tkinter.simpledialog.askstring('Scratch Connector', 'IP:')
+if not HOST:
+    sys.exit(1)
+
+print ("Connecting...")
+scratchSock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+scratchSock.connect((HOST, PORT))
+print ("Connected!")
+
+def sendScratchCommand(cmd):
+    n = len(cmd)
+    a = array('c')
+    a.append(chr((n >> 24) & 0xFF))
+    a.append(chr((n >> 16) & 0xFF))
+    a.append(chr((n >>  8) & 0xFF))
+    a.append(chr(n & 0xFF))
+    scratchSock.send(a.tostring() + cmd)
+
+while True:
+    msg = tkinter.simpledialog.askstring('Scratch Connector', 'Send Broadcast:')
+    if msg:
+        sendScratchCommand('broadcast "{}"'.format(msg))

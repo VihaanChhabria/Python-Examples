@@ -11,8 +11,8 @@ while True:
     height = int(cap.get(4)) #This will get the hieght of the camera.
 
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV) #Converts the video into bgr.
-    lower_blue = np.array([90, 50, 50]) #Where the program starts seeing color
-    upper_blue = np.array([130, 255, 255]) #Where the program does not see the color
+    upper_blue = np.array([193, 30, 58]) #Where the program starts seeing color90, 50, 50]
+    lower_blue = np.array([132, 19, 32]) #Where the program does not see the color([130, 255, 255]
 
     mask = cv2.inRange(hsv, lower_blue, upper_blue) #Impiments the ranges to the frame
 
